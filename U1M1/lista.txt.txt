@@ -1,3 +1,8 @@
 verduras
 fernet
 queso
+pan 
+yerba
+carne
+fideos
+alfajores
