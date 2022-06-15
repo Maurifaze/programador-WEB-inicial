@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primera clase de HTML</title>
+</head>
+
+<body>
+    <p> probando texto </p>
+    <h1>Encabezado 1 (unico)</h1>
+    <h2>encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>encabezado 4</h4>
+    <h5>encabezado 5</h5>
+    <h6>ultimo encabezado 6</h6>
+    <h4>mi empresa</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa vitae iusto similique provident blanditiis, illo
+        perferendis recusandae quis et laborum harum eaque iure ad, ipsum iste doloribus earum nemo neque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, deleniti quam magni consectetur
+        perspiciatis! Nam atque sint culpa optio neque sequi pariatur, dolor fugit? Maiores, dignissimos fugiat? Non,
+        temporibus!</p>
+
+    <h2>Mis objetivos son:</h2>
+    <ul>
+        <li>objetivo 1</li>
+        <li>objetivo 2</li>
+        <li>objetivo 3</li>
+        <li>objetivo 4</li>
+    </ul>
+
+    <h2>Los pasos a seguir son:</h2>
+    <ol>
+        <li>paso 1</li>
+        <li>paso 2</li>
+        <li>paso 3</li>
+        <li>paso 4</li>
+    </ol>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi possimus eum recusandae ipsam consequatur
+        error veritatis itaque minus, illum accusamus asperiores delectus aliquam exercitationem quia dicta ducimus
+        beatae quo unde. <a
+            href="https://www.youtube.com/watch?v=Kxk-pNGFgLw&list=RDKxk-pNGFgLw&start_radio=1&ab_channel=MaurcioMu%C3%B1oz"
+            target="_blank">click
+            aca</a> </p>
+
+    <h2>trabajamos con imagenes</h2>
+    <img src="IMAGEN 1.png" alt="Hogwarts">
+    <img src="IMAGENES/IMAGEN 2.jpg" alt="callejon diagon">
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="black"></circle>
+    </svg>
+
+    <div>
+        <h2>Historia</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente nisi nesciunt distinctio qui tempore eius
+            laudantium debitis, commodi repellendus doloribus excepturi, rem obcaecati deserunt, architecto quibusdam
+            eos? Eaque, possimus rerum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur velit quas, harum sequi eligendi
+            dolorum et corporis fugit voluptatem, dolor ducimus suscipit illum pariatur iusto. Placeat modi voluptatum
+            expedita quae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ea nobis incidunt saepe, iste obcaecati
+            explicabo eligendi consectetur eveniet et quia dolorem dolorum officia doloribus! Vero ea eum voluptates
+            dolorem?</p>
+    </div>
+
+    <h4>probando audio mp3 y video mp4</h4>
+    <audio src="mp3mp4/Soda Stereo  Prófugos mp3.mp3" controls></audio>
+    <video src="mp3mp4/ Soda Stereo  Prófugos mp4.mp4" poster="IMAGENES/gustavo.jpg" controls></video>
+
+    <form action="" method="">
+        <p>
+            <label for="nom">Nombre</label>
+            <input type="text" name="Nombre" placeholder="Nombre" />
+        </p>
+        <p>
+            <label for="nom">Apellido</label>
+            <input type="text" name="Apellido" placeholder="Apellido" />
+        </p>
+        <p>
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" />
+        </p>
+
+        <label for="sexo">Sexo</label>
+        <ul>
+            <li>
+                <input type="radio" name="Sexo" value="hombre" />
+                <label>Hombre</label>
+            </li>
+            <li>
+                <input type="radio" name="Sexo" value="mujer" />
+                <label>Mujer</label>
+            </li>
+        </ul>
+        <label> Hobbies</label>
+        <ul>
+            <li>
+                <input type="checkbox" name="hobbies []" value="bailar" id="bailar" />
+                <label for="bailar">Bailar</label>
+            </li>
+            <li>
+                <input type="checkbox" name="hobbies []" value="cantar" id="cantar" />
+                <label for="cantar">Cantar</label>
+            </li>
+            <li>
+                <input type="checkbox" name="hobbies []" value="nadar" id="nadar" />
+                <label for="nadar">Nadar</label>
+            </li>
+            <li>
+                <input type="checkbox" name="hobbies []" value="correr" id="correr" />
+                <label for="correr">Correr</label>
+            </li>
+        </ul>
+
+        <p>
+            <label for="titulo">titulo</label>
+            <select name="titulo">
+                <option value="primario">Primario</option>
+                <option value="secundario">Secundario</option>
+                <option value="terciario">Terciario</option>
+                <option value="universitario">Universitario</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="comentario">Comentarios</label>
+            <textarea name="comentarios"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"/>
+            <input type="reset" value="Borrar" />
+        </p>
+
+    </form>
+
+</body>
+
+</html>
