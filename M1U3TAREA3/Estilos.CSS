@@ -1,0 +1,73 @@
+body{
+    background-image:url(wood-31.jpg);
+}
+
+h1{
+    color: rgb(30, 18, 18);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    /*background:
+    linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px*/
+}
+
+h2{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h3{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h4{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+ul{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+ol{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+div{
+    width: 400px;
+    height: 200px;
+    background: #4d4444;
+    background: linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
+    background: -webkit-linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
+    background: -moz-linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
+    /*background-image: url(fondo2.jpg)*/
+}
+
+#principal{
+    color: black;
+
+
+    
+}
+
+img{
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 500px;
+}
+
+p{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+label{
+    color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+

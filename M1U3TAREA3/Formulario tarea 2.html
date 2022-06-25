@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulario de contacto Mauricio Fazeuilhe</title>
+    <link rel="stylesheet" href="Estilos.CSS">
+</head>
+<body>
+    
+    <h1>Formulario de Contacto</h1>
+
+    <h4>Por favor, complete el Siguiente formulario</h4>
+        <p>
+            <label for="nom">Nombre</label>
+            <input type="text" name="Nombre" placeholder="Nombre" />
+        </p>
+        <p>
+            <label for="nom">Apellido</label>
+            <input type="text" name="Apellido" placeholder="Apellido" />
+        </p>
+
+        <label for="sexo">Sexo</label>
+        <ul>
+            <li>
+                <input type="radio" name="Sexo" value="hombre" />
+                <label>Hombre</label>
+            </li>
+            <li>
+                <input type="radio" name="Sexo" value="mujer" />
+                <label>Mujer</label>
+            </li>
+        </ul>
+
+        <h4>¿Por que medio desea contactarse?</h4>
+
+        <p>
+            <label for="medio">Medio</label>
+            <select name="medio">
+                <option value="telefono">Telefono</option>
+                <option value="e-mail">e-mail</option>
+                <option value="Reunion personal">Reunion personal</option>
+            </select>
+        </p>
+
+        <label> Motivos de contacto</label>
+        <ul>
+            <li>
+                <input type="checkbox" name="motivo []" value="charla" id="charla" />
+                <label for="charla">Charla</label>
+            </li>
+            <li>
+                <input type="checkbox" name="motivo []" value="motivos laborales" id="motivos laborales" />
+                <label for="motivos laborales">Motivos laborales</label>
+            </li>
+            <li>
+                <input type="checkbox" name="motivo []" value="solicitudes" id="solicitudes" />
+                <label for="soliciitudes">Soliciitudes</label>
+            </li>
+            <li>
+                <input type="checkbox" name="motivo []" value="otro motivo" id="otro motivo" />
+                <label for="otro motivo">Otro motivo</label>
+            </li>
+        </ul>
+
+        <h4>En caso seleccionar "otro", por favor, describa brevemente el motivo</h4>
+        <p>
+            <label for="comentario">Motivo</label>
+            <textarea name="comentarios"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"/>
+            <input type="reset" value="Borrar" />
+        </p>
+
+
+</body>
+</html>
