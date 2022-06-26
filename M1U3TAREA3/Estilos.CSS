@@ -1,73 +1,94 @@
-body{
-    background-image:url(wood-31.jpg);
+body {
+   background-image: url(wood-31.jpg);
 }
 
-h1{
+h1 {
     color: rgb(30, 18, 18);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    /*background:
+    background:
     linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
     linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
     background-color:#708090;
-    background-size: 64px 128px*/
+    background-size: 64px 128px
 }
 
-h2{
+h2 {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-h3{
+h3 {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-h4{
+h4 {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-ul{
+ul {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-ol{
+ol {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-div{
+div.uno {
     width: 400px;
     height: 200px;
     background: #4d4444;
-    background: linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
-    background: -webkit-linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
-    background: -moz-linear-gradient(0deg,#4d4444 0%, #2e2727 20%);
+    background: linear-gradient(0deg, #4d4444 0%, #2e2727 20%);
+    background: -webkit-linear-gradient(0deg, #4d4444 0%, #2e2727 20%);
+    background: -moz-linear-gradient(0deg, #4d4444 0%, #2e2727 20%);*/
     /*background-image: url(fondo2.jpg)*/
 }
 
-#principal{
-    color: black;
-
-
-    
-}
-
-img{
+img {
     max-width: 500px;
     max-height: 500px;
     margin-left: 500px;
 }
 
-p{
+p {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
-label{
+label {
     color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
+
+
+div.contenedor {
+    /*display:inline-flex;*/
+    height: 250px;
+    width: 300px;
+    background-color: rgb(255, 174, 0);
+    flex-direction: column;
+    align-items: stretch;
+    align-items: baseline;
+}
+
+div.item {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #b3b607;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #3a2b01;
+}
+
 
