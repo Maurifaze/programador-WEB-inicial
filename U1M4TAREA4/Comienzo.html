@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comienzo</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <script>
+        var distancia;
+        distancia=prompt('Ingrese la distancia a recorrer expresada en metros:', ''); 
+
+        if (distancia <= 1000)
+        {
+       document.write('para recorrer esa distancia es apropiado ir caminando');
+        } 
+        
+        else if (distancia <= 10000)
+        {
+       document.write('para recorrer esa distancia es apropiado ir en bicileta');
+        }
+
+        else if (distancia <= 30000)
+        {
+       document.write('para recorrer esa distancia es apropiado ir en colectivo');
+        }
+
+        else if (distancia <= 100000)
+        {
+       document.write('para recorrer esa distancia es apropiado ir en auto');
+        }
+
+        else (distancia > 100000)
+        {
+       document.write('para recorrer esa distancia es apropiado ir en avion');
+        }
+        
+    </script>
+
+</body>
+
+</html>
