@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Ejercicio 1</title>
+</head>
+
+<body class="fondo">
+    <h1>Ejercicio 1</h1>
+
+    <h2>Hace click sobre un cuadrado para cambiar de color el fondo</h2>
+
+    <div class="contenedor">
+
+        <div class="cuadrado1" id="rojo">
+        </div>
+
+        <div class="cuadrado2" id="azul">
+        </div>
+
+        <div class="cuadrado3" id="violeta">
+        </div>
+
+    </div>
+
+    <hr>
+    <p><button class="boton" id="reset">Resetear</button></p>
+
+
+    <script>
+
+        var fondo = document.getElementsByClassName('fondo')[0];
+        var rojo = document.getElementById('rojo');
+        var azul = document.getElementById('azul');
+        var violeta = document.getElementById('violeta');
+        var reset = document.getElementById('reset');
+
+        rojo.addEventListener('click', function () {
+            fondo.classList.add('rojo');
+        });
+
+
+        azul.addEventListener('click', function () {
+            fondo.classList.add('azul');
+        });
+
+        violeta.addEventListener('click', function () {
+            fondo.classList.add('violeta');
+        });  
+
+        reset.addEventListener('click', function () {
+            fondo.classList.remove('rojo', 'azul', 'violeta');
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="Esttilo.css">
+</head>
+
+<body>
+    <script>
+        var numeros = ["numero1", "numero2", "numero3", "numero4", "numero5"];
+        var cantidad;
+        var nummayor;      
+        
+
+        for (cantidad = 0; cantidad <= 4; cantidad++) 
+        {
+            numeros[cantidad]=parseInt(prompt('Ingrese un número:',''));
+        }
+
+        document.write ("los numeros ingresados fueron: ", numeros);
+        document.write ("<br>")
+
+        var nummayor = 0;
+
+        for (cantidad = 0; cantidad <= 4; cantidad++) 
+        {
+           if (numeros[cantidad] >= nummayor)
+           {
+             nummayor = numeros[cantidad];
+           }   
+           else
+           {
+            nummayor = nummayor;
+           } 
+        }
+
+        document.write ("el numero mayor es: ", nummayor);
+    
+
+
+    </script>
+</body>
+
+</html>

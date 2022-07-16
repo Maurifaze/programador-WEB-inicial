@@ -1,0 +1,16 @@
+body {
+    background-size: cover;
+    background-image: url(fondomat.jpg);
+}
+
+h1 {
+    color: rgb(30, 18, 18);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+h4 {
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;            
+}

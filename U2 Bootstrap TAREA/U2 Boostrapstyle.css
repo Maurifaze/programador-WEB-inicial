@@ -1,0 +1,71 @@
+body {
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(pruebafondo4.jpg);
+
+    /*
+    background-image: url(pruebafondo3.jpg);*/
+}
+
+/* estilos menu */
+
+a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/*estilos carrusel*/
+
+.carousel {
+    margin: auto;
+    width: 700px;
+    height: 460px;
+}
+
+.carousel img {
+    border-radius: 20px;
+}
+
+
+/* estilos acordeon*/
+
+.accordion {
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.accordion .accordion-item {
+    border-bottom-color: #EDEFF0;
+    background-color: greenyellow;
+}
+
+.accordion .accordion-button {
+    width: 100%;
+    font-weight: bold;
+    color: green;
+    padding: 0;
+}
+
+.preguntas {
+    color: antiquewhite;
+    text-align: center;
+}
+
+/*estilos tarjetas */
+
+
+.tarjetas {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px auto;
+  }
+  
+  .card {
+    width: 100px; 
+  }
+
