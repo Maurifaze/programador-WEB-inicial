@@ -50,6 +50,7 @@ a {
     padding: 0;
 }
 
+
 .preguntas {
     color: antiquewhite;
     text-align: center;
@@ -68,4 +69,10 @@ a {
   .card {
     width: 100px; 
   }
+
+=======
+.preguntas{
+    color: antiquewhite;
+    text-align: center;
+}
 
