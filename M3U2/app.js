@@ -6,11 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require ('./routes/index');
 var usersRouter = require ('./routes/users');
-var galeriaRouter = r
-equire (',/rotues/galeria');
-var contactoRouter = require (',/rotues/contacto');
-var nosotrosRouter = require (',/rotues/nosotros');
-var carritoRouter = require (',/rotues/carrito');
+var galeriaRouter = require ('./routes/galeria');
+var contactoRouter = require ('./routes/contacto');
+var nosotrosRouter = require ('./routes/nosotros');
+var carritoRouter = require ('./routes/carrito');
 
 
 var app = express();
