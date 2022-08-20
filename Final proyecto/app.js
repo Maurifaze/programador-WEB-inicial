@@ -4,10 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index'); // routes/index.js
+require('dotenv').config();
+
+var indexRouter = require('./routes/index'); 
 var guitarrasRouter = require('./routes/guitarras'); 
 var bajosRouter = require('./routes/bajos'); 
-var bateriasRouter = require('./routes/baterias.js'); 
+var bateriasRouter = require('./routes/baterias'); 
 var saxosRouter = require('./routes/saxos'); 
 var sobrenosotrosRouter = require('./routes/sobrenosotros'); 
 var carritoRouter = require('./routes/carrito'); 

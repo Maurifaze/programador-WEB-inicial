@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+</head>
+
+<body>
+
+    <h1>Lista de compras</h1>
+    <h2>Ingrase un producto para agregar a la lista</h2>
+
+    <input id="producto" type="text" name="Ingrese producto" placeholder="Escriba aqui el producto" />
+    <button id="boton">Agregar producto</button>
+
+    <ul>
+        <li></li>
+    </ul>
+
+
+    <script>
+        var lista = document.querySelector('ul');
+        var producto = document.querySelector('producto');
+        var boton = document.querySelector('boton');
+
+        boton.addEventListener('click', addProducto);
+
+        function addProducto() {
+            var item = '<li>' + producto.value + '<li>';
+            lista.innerHTML += item;
+            producto.value = '';
+            producto.focus();
+        }
+
+     
+    </script>
+
+</body>
+
+</html>
