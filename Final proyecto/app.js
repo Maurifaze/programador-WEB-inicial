@@ -5,15 +5,20 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var session = require ('express-session');
 
 
 var indexRouter = require('./routes/index'); 
+var userRouter = require('./routes/users');
+var loginRouter = require('./routes/admin/login');
 var guitarrasRouter = require('./routes/guitarras'); 
 var bajosRouter = require('./routes/bajos'); 
 var bateriasRouter = require('./routes/baterias'); 
 var saxosRouter = require('./routes/saxos'); 
 var sobrenosotrosRouter = require('./routes/sobrenosotros'); 
 var carritoRouter = require('./routes/carrito'); 
+var paneladminRouter = require('./routes/admin/paneladmin');
+const { secureHeapUsed } = require('crypto');
 
 
 var app = express();
@@ -28,14 +33,36 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'holasoymauriciofazeuilhe',
+  resave: false,
+  saveUninitialized: true
+}));
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario); 
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login')
+    }
+  } catch (error) {
+    console.log (error);
+  }
+}
+
+
 app.use('/', indexRouter);
+app.use('/users', userRouter);
+app.use('/admin/login', loginRouter);
 app.use('/guitarras', guitarrasRouter);
 app.use('/bajos', bajosRouter);
 app.use('/baterias', bateriasRouter);
 app.use('/saxos', saxosRouter);
 app.use('/sobrenosotros', sobrenosotrosRouter);
 app.use('/carrito', carritoRouter);
-
+app.use('/admin/paneladmin', secured, paneladminRouter);
 
 
 // catch 404 and forward to error handler

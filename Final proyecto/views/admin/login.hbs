@@ -1,0 +1,25 @@
+<div class="login">
+
+    <h2>Ingrese Usuario y Password</h2>
+
+    <form action="/admin/login" method="post">
+
+        <p>
+            <label for="nom">Usuario</label>
+            <input type="text" name="usuario" id="usuario" />
+        </p>
+        <p>
+            <label for="nom">Password</label>
+            <input type="password" name="password" id="password" />
+        </p>
+
+        <p>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </p>
+
+    </form>
+
+    {{#if error}}
+    <p>Usuario o Password incorrectos! </p>
+    {{/if}}
+</div>
