@@ -7,13 +7,15 @@
     <br>
     
     <div class="ofertasdelmes">
+      {{#each novedades}}
       <div>
         <img src="images/ofertaguitarra.jpg" alt="Guitarras" class="item-image">
-        <h3 class="item-title">Guitarra Jackson Flame Arce</h3>
-        <h3 class="item-price"> $47000</h3>
+        <h3 class="item-title">{{tipo}} {{marca}} {{descripcion}}</h3>
+        <h3 class="item-price"> {{precio}}</h3>
         <a href="/carrito" class="addToCart">Agregar al carrito<i class="fas fa-angle-double-right"></i></a>
       </div>
-
+      {{/each}}
+<!--
       <div>
         <img src="images/ofertabajo.jpg" alt="Bajos" class="item-image">
         <h3 class="item-title">Bajo Fender jazz bass</h3>
@@ -34,9 +36,8 @@
         <h3 class="item-price">$72000</h3>
         <a href="/carrito">Agregar al carrito<i class="fas fa-angle-double-right"></i></a>
       </div>
-
+-->
     </div>
-
 
     <br>
     <hr>

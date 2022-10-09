@@ -61,7 +61,7 @@
 
  .imagenprincipal{
   width: 100%;
-  height: 550px;
+  height: 700px;
   border-radius: 20px;
   margin-top: 10px;
  }
@@ -181,4 +181,53 @@
 .containersobrenosotros{
   width: 90%;
   margin: auto;
+}
+
+
+/*usuario*/
+
+.bienvenidausuario{
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+}
+
+.bienvenidausuario a {
+  font-size: larger;
+}
+
+/*ESTILOS TABLA*/
+
+.containertable{
+	margin: 150px auto;
+	width: 600px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #369681;
+	color: white;
 }

@@ -1,0 +1,40 @@
+<div class="modificar">
+
+  <h2>Modificar oferta</h2>
+
+  <form action="/admin/paneladmin/modificar" method="post">
+    <p>
+      <label for="tipo">Foto</label>
+      <input type="text" name="foto" value="{{novedad.foto}}"/>
+    </p>
+
+    <p>
+      <label for="tipo">Tipo de instrumento</label>
+      <input type="text" name="tipo" value="{{novedad.tipo}}" />
+    </p>
+    <p>
+      <label for="marca">Marca</label>
+      <input type="text" name="marca" value="{{novedad.marca}}"/>
+    </p>
+
+    <p>
+      <label for="descripcion">Descripcion</label>
+      <input type="text" name="descripcion" value="{{novedad.descripcion}}"/>
+    </p>
+
+    <p>
+      <label for="precio">Precio</label>
+      <input type="precio" name="precio" value="{{novedad.precio}}"/>
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-primary">Modificar</button>
+    </p>
+
+  </form>
+  {{#if error}}
+  <p>{{message}}</p>
+  {{/if}}
+
+
+</div>

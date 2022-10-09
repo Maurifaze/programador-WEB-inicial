@@ -1,2 +1,52 @@
-<h1>Hola {{adminusuario}}, este es el panel de administradores</h1>
-<a href="/admin/login/logout" class="btn btn-danger"> Cerrar sesion <i class="fas fa-sign-out-alt"></i></a>
+<div class="bienvenidausuario">
+  <h2>Hola {{adminusuario}}</h2>
+  <a href="/admin/login/logout" class="btn btn-danger"> Cerrar sesion <i class="fas fa-sign-out-alt"></i></a>
+</div>
+
+<br>
+
+
+<h1>Lista de ofertas del mes</h1>
+<a href="/admin/paneladmin/agregar"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar novedad</a>
+
+<div id="containertable">
+
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>foto</th>
+        <th>tipo de instrumento</th>
+        <th>marca</th>
+        <th>descripcion</th>
+        <th>precio</th>
+        <th>borrar</th>
+        <th>editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each novedades}}
+      <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{foto}}</td>
+        <td>{{tipo}}</td>
+        <td>{{marca}}</td>
+        <td>{{descripcion}}</td>
+        <td>{{precio}}</td>
+        <td>
+          <a href="/admin/paneladmin/eliminar/{{id}}" class="btn btn-secondary">
+            <i class="fa fa-trash" ></i>
+          </a>
+        </td>
+        <td>
+          <a href="/admin/paneladmin/modificar/{{id}}">
+            <i class="fas fa-pen"></i>
+          </a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+
+  </table>
+</div>

@@ -1,0 +1,40 @@
+<div class="agregar">
+
+  <h2>Agregar nueva oferta</h2>
+
+  <form action="/admin/paneladmin/agregar" method="post">
+    <p>
+      <label for="tipo">Foto</label>
+      <input type="text" name="foto" placeholder="Reservado para img" />
+    </p>
+
+    <p>
+      <label for="tipo">Tipo de instrumento</label>
+      <input type="text" name="tipo" placeholder="Tipo de instrumento" />
+    </p>
+    <p>
+      <label for="marca">Marca</label>
+      <input type="text" name="marca" placeholder="Marca" />
+    </p>
+
+    <p>
+      <label for="descripcion">Descripcion</label>
+      <input type="text" name="descripcion" placeholder="Descripcion" />
+    </p>
+
+    <p>
+      <label for="precio">Precio</label>
+      <input type="precio" name="precio" placeholder="Precio" />
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </p>
+
+  </form>
+  {{#if error}}
+  <p>{{message}}</p>
+  {{/if}}
+
+
+</div>
