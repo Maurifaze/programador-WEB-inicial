@@ -2,10 +2,9 @@
 
   <h2>Agregar nueva oferta</h2>
 
-  <form action="/admin/paneladmin/agregar" method="post">
+  <form action="/admin/paneladmin/agregar" method="post" enctype="multipart/form-data">
     <p>
-      <label for="tipo">Foto</label>
-      <input type="text" name="foto" placeholder="Reservado para img" />
+      <label>Foto <input type="file" name="foto" id="foto"/></label>
     </p>
 
     <p>

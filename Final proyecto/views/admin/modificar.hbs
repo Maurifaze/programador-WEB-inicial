@@ -2,17 +2,24 @@
 
   <h2>Modificar oferta</h2>
 
-  <form action="/admin/paneladmin/modificar" method="post">
+  <form action="/admin/paneladmin/modificar" method="post" enctype="multipart/form-data">
   <input type="hidden" value="{{novedad.id}}" name="id">
+    
     <p>
-      <label for="tipo">Foto</label>
-      <input type="text" name="foto" value="{{novedad.foto}}"/>
+      <label>Foto <input type="file" name="foto" id="foto" /> </label>
+    </p>
+    
+    <p>
+      <label><input type="checkbox" name="img_delete" id="img_delete" value="1">
+      Eliminar elemento actual? </label>
+      <input type="hidden" name="img_original" value="{{novedad.img_id}}">
     </p>
 
     <p>
       <label for="tipo">Tipo de instrumento</label>
       <input type="text" name="tipo" value="{{novedad.tipo}}" />
     </p>
+    
     <p>
       <label for="marca">Marca</label>
       <input type="text" name="marca" value="{{novedad.marca}}"/>

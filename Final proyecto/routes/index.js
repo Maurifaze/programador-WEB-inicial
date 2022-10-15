@@ -2,13 +2,37 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 var novedadesModel = require('../models/novedadesModel')
+var cloudinary = require('cloudinary').v2;
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function (req, res, next) {
 
   var novedades = await novedadesModel.getNovedades()
-  res.render('index',{novedades}); 
+
+
+  /*novedades = novedades.splice(0, 5);*/
+  
+  novedades = novedades.map(novedad => {
+    if (novedad.img_id) {
+      const foto = cloudinary.url(novedad.img_id, {
+        width: 500,
+        crop: 'fill'
+      });
+      return {
+        ...novedad,
+        foto
+      }
+    } else {
+      return {
+        ...novedad,
+        foto: '/images/logo.jpg' /*no voy a dejar disponible esta opcion */
+      }
+    }
+  });
+  res.render('index', { novedades });
 });
+
+
 
 router.post('/', async (req, res, next) => {
 
@@ -42,10 +66,5 @@ router.post('/', async (req, res, next) => {
   });
 
 });
-  
-
-
-
-
 
 module.exports = router;
