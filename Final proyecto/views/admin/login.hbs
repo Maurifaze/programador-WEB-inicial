@@ -2,22 +2,26 @@
 
     <h2>Ingrese Usuario y Password</h2>
 
-    <form action="/admin/login" method="post">
+    <div class="container-login">
 
-        <p>
-            <label for="nom">Usuario</label>
-            <input type="text" name="usuario" id="usuario" />
-        </p>
-        <p>
-            <label for="nom">Password</label>
-            <input type="password" name="password" id="password" />
-        </p>
 
-        <p>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </p>
+        <form action="/admin/login" method="post">
 
-    </form>
+            <p>
+                <label for="nom">Usuario</label>
+                <input type="text" name="usuario" id="usuario" />
+            </p>
+            <p>
+                <label for="nom">Password</label>
+                <input type="password" name="password" id="password" />
+            </p>
+
+            <p>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </p>
+
+        </form>
+    </div>
 
     {{#if error}}
     <p>Usuario o Password incorrectos! </p>

@@ -45,4 +45,11 @@ async function modificarNovedadById(obj, id) {
 }
 
 
-module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById }
+async function buscarNovedades(busqueda) {
+    var query = "select * from novedades where tipo like ? OR marca like ? OR descripcion like ? OR precio like ? "; 
+    var rows = await pool.query(query, [ '%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%']);
+    return rows;
+}
+
+
+module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById, buscarNovedades }

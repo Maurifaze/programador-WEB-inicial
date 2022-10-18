@@ -10,7 +10,13 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
 
 
 router.get('/', async function (req, res, next) {
-  var novedades = await novedadesModel.getNovedades();
+
+  var novedades;
+  if (req.query.q === undefined) {
+    novedades = await novedadesModel.getNovedades();
+  } else {
+    novedades = await novedadesModel.buscarNovedades(req.query.q);
+  }
 
   novedades = novedades.map(novedad => {
     if (novedad.img_id) {
@@ -35,7 +41,9 @@ router.get('/', async function (req, res, next) {
   res.render('admin/paneladmin', {
     layout: 'admin/layout',
     adminusuario: req.session.nombre,
-    novedades
+    novedades,
+    is_search: req.query.q !== undefined,
+    q: req.query.q
   });
 });
 
@@ -44,7 +52,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
   var id = req.params.id;
 
   let novedad = await novedadesModel.getNovedadById(id);
-  if (novedad.img_id){
+  if (novedad.img_id) {
     await (destroy(novedad.img_id));
   }
 
@@ -106,15 +114,15 @@ router.post('/modificar', async (req, res, next) => {
   try {
     let img_id = req.body.img_original;
     let borrar_img_vieja = false;
-    if (req.body.img_delete ==="1") {
+    if (req.body.img_delete === "1") {
       img_id = null;
       borrar_img_vieja = true;
     } else {
       if (req.files && Object.keys(req.files).length > 0) {
         foto = req.files.foto;
         img_id = (await
-        uploader(foto.tempFilePath)).public_id;
-        borrar_img_vieja = true; 
+          uploader(foto.tempFilePath)).public_id;
+        borrar_img_vieja = true;
       }
     }
     if (borrar_img_vieja && req.body.img_original) {
